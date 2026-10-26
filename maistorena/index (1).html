@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Casa rural para 8 personas cerca de Pamplona · Maistorena Etxea</title>
+<meta name="google-site-verification" content="_9X9n1ueLUax4cVM4VNCTXPglRZfFGb3IIIcz-X9xdI" />
+<meta name="description" content="Casa rural completa para 8 personas a 9 km de Pamplona (Navarra). Caserío de piedra de 200 años con 4 dormitorios, 2,5 baños, jardín de 1.500 m², billar y ping pong. Ideal para familias y grupos.">
+<link rel="canonical" href="https://www.maistorenaetxea.com/">
+<meta property="og:title" content="Casa rural para 8 personas cerca de Pamplona · Maistorena Etxea">
+<meta property="og:description" content="Caserío restaurado a 15 minutos de Pamplona. 8 plazas, 4 dormitorios, jardín de 1.500 m². Alquiler íntegro.">
+<meta property="og:image" content="https://www.maistorenaetxea.com/fotos/01.jpg">
+<meta property="og:url" content="https://www.maistorenaetxea.com/">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --piedra:#f4efe6; --piedra-2:#e9e1d3; --madera:#6b4a2b; --madera-2:#8a6540;
+    --tinta:#2b241c; --tinta-2:#5c5247; --verde:#4b6b3f; --ocupado:#c9b9a6; --linea:#d9cfbf;
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{margin:0;font-family:Inter,system-ui,sans-serif;color:var(--tinta);background:var(--piedra);line-height:1.6}
+  h1,h2,h3{font-family:Fraunces,Georgia,serif;font-weight:600;line-height:1.15;margin:0 0 .5em}
+  h2{font-size:clamp(1.6rem,3vw,2.2rem)}
+  a{color:var(--madera)}
+  .wrap{max-width:1080px;margin:0 auto;padding:0 16px}
+  section{padding:56px 0}
+
+  /* Cabecera */
+  header{position:sticky;top:0;z-index:10;background:rgba(244,239,230,.92);backdrop-filter:blur(6px);border-bottom:1px solid var(--linea)}
+  header .wrap{display:flex;align-items:center;justify-content:space-between;height:60px}
+  .marca{font-family:Fraunces,serif;font-size:1.25rem;font-weight:600;text-decoration:none;color:var(--tinta)}
+  nav a{text-decoration:none;color:var(--tinta-2);margin-left:18px;font-size:.95rem}
+  nav a.cta{background:var(--madera);color:#fff;padding:8px 14px;border-radius:6px}
+  @media (max-width:640px){nav a:not(.cta){display:none}}
+
+  /* Portada */
+  .hero{position:relative;min-height:72vh;display:flex;align-items:flex-end;color:#fff;background:#3a2e22 url(fotos/01.jpg) center/cover}
+  .hero::after{content:"";position:absolute;inset:0;background:linear-gradient(to top,rgba(20,14,8,.78) 0%,rgba(20,14,8,.15) 60%)}
+  .hero .wrap{position:relative;z-index:1;padding-bottom:48px}
+  .hero h1{font-size:clamp(2.2rem,6vw,4rem);margin-bottom:.2em}
+  .hero p{font-size:1.15rem;max-width:560px;margin:0 0 20px;opacity:.95}
+  .btn{display:inline-block;background:#fff;color:var(--tinta);padding:12px 20px;border-radius:6px;text-decoration:none;font-weight:600}
+  .btn.sec{background:transparent;color:#fff;border:1.5px solid rgba(255,255,255,.8);margin-left:8px}
+
+  /* Datos clave */
+  .datos{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:12px;margin-top:-30px;position:relative;z-index:2}
+  .dato{background:#fff;border:1px solid var(--linea);border-radius:10px;padding:16px;text-align:center}
+  .dato b{display:block;font-family:Fraunces,serif;font-size:1.6rem;color:var(--madera)}
+  .dato span{font-size:.85rem;color:var(--tinta-2)}
+
+  /* Texto */
+  .dos{display:grid;grid-template-columns:1.2fr .8fr;gap:40px;align-items:start}
+  @media (max-width:760px){.dos{grid-template-columns:1fr}}
+  .caja{background:#fff;border:1px solid var(--linea);border-radius:10px;padding:22px}
+  .caja h3{font-size:1.1rem;margin-bottom:.6em}
+  .caja ul{margin:0;padding-left:18px}
+  .caja li{margin:4px 0}
+
+  /* Galería */
+  .galeria{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:10px}
+  .galeria figure{margin:0;aspect-ratio:4/3;overflow:hidden;border-radius:8px;background:var(--piedra-2);cursor:pointer}
+  .galeria img{width:100%;height:100%;object-fit:cover;transition:transform .3s}
+  .galeria figure:hover img{transform:scale(1.04)}
+  .galeria figure:first-child{grid-column:span 2;grid-row:span 2}
+  @media (max-width:520px){.galeria figure:first-child{grid-column:span 1;grid-row:span 1}}
+  .visor{position:fixed;inset:0;background:rgba(0,0,0,.92);display:none;align-items:center;justify-content:center;z-index:50}
+  .visor.on{display:flex}
+  .visor img{max-width:94vw;max-height:88vh;border-radius:6px}
+  .visor button{position:absolute;top:14px;right:16px;font-size:2rem;background:none;border:0;color:#fff;cursor:pointer}
+  .visor .prev,.visor .next{top:50%;transform:translateY(-50%);font-size:2.4rem;padding:0 12px}
+  .visor .prev{left:4px;right:auto}.visor .next{right:4px}
+
+  /* Calendario */
+  .cal-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:20px}
+  .mes{background:#fff;border:1px solid var(--linea);border-radius:10px;padding:14px}
+  .mes h3{font-size:1rem;text-align:center;margin-bottom:8px}
+  .mes table{width:100%;border-collapse:collapse;font-size:.85rem}
+  .mes th{font-weight:500;color:var(--tinta-2);padding:4px 0}
+  .mes td{text-align:center;padding:0}
+  .mes td span{display:block;margin:2px;padding:6px 0;border-radius:5px}
+  .mes td.libre span{background:#eef3ea;color:var(--verde)}
+  .mes td.ocupado span{background:var(--ocupado);color:#fff;text-decoration:line-through}
+  .mes td.pasado span{color:#b8b0a4}
+  .leyenda{display:flex;gap:18px;flex-wrap:wrap;font-size:.9rem;margin:14px 0 22px}
+  .leyenda i{display:inline-block;width:14px;height:14px;border-radius:3px;vertical-align:-2px;margin-right:6px}
+  .nota{font-size:.9rem;color:var(--tinta-2);margin-top:14px}
+  .aviso{background:#fff7e8;border:1px solid #efd9a8;border-radius:8px;padding:12px 16px;font-size:.95rem}
+
+  /* Reserva directa */
+  .directa{background:var(--piedra-2)}
+  .directa .intro{max-width:640px;margin:0 0 24px}
+  .compara{display:grid;grid-template-columns:1fr auto 1fr;gap:18px;align-items:stretch}
+  @media (max-width:760px){.compara{grid-template-columns:1fr}.compara .vs{display:none}}
+  .compara .col{background:#fff;border:1px solid var(--linea);border-radius:10px;padding:22px}
+  .compara .col.aqui{border:2px solid var(--madera)}
+  .compara h3{font-size:1.05rem;margin-bottom:12px;display:flex;align-items:center;gap:8px}
+  .compara .vs{align-self:center;font-family:Fraunces,serif;font-size:1.4rem;color:var(--tinta-2)}
+  .compara ul{list-style:none;margin:0;padding:0}
+  .compara li{padding:8px 0;border-top:1px solid var(--linea);display:flex;gap:10px;align-items:flex-start}
+  .compara li:first-child{border-top:0}
+  .compara li i{flex:0 0 22px;height:22px;border-radius:50%;display:inline-flex;align-items:center;justify-content:center;font-style:normal;font-size:.8rem;font-weight:600}
+  .compara .si i{background:#eef3ea;color:var(--verde)}
+  .compara .no i{background:#f3e9e2;color:#9a5b3a}
+  .sello{display:inline-block;background:var(--madera);color:#fff;font-size:.8rem;font-weight:600;letter-spacing:.03em;padding:4px 10px;border-radius:999px;margin-left:auto}
+  .directa .nota{margin-top:18px}
+  /* Contacto */
+  .contacto{background:var(--madera);color:#fff}
+  .contacto a{color:#fff}
+  .contacto .btn{background:#fff;color:var(--madera)}
+  .contacto .dos{align-items:center}
+  footer{padding:28px 0;font-size:.85rem;color:var(--tinta-2);border-top:1px solid var(--linea)}
+  footer a{color:var(--tinta-2)}
+</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LodgingBusiness",
+  "additionalType": "https://schema.org/House",
+  "name": "Maistorena Etxea",
+  "description": "Casa rural completa para 8 personas a 9 km de Pamplona. Caserío de piedra de más de 200 años con 4 dormitorios, 2,5 baños y jardín de 1.500 m².",
+  "url": "https://www.maistorenaetxea.com/",
+  "image": "https://www.maistorenaetxea.com/fotos/01.jpg",
+  "email": "maistorenaetxea@gmail.com",
+  "identifier": "Registro de Turismo de Navarra UCR01206",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Garciriáin",
+    "addressRegion": "Navarra",
+    "addressCountry": "ES"
+  },
+  "numberOfRooms": 4,
+  "petsAllowed": false,
+  "amenityFeature": [
+    {"@type": "LocationFeatureSpecification", "name": "Wifi", "value": true},
+    {"@type": "LocationFeatureSpecification", "name": "Cocina", "value": true},
+    {"@type": "LocationFeatureSpecification", "name": "Jardín", "value": true},
+    {"@type": "LocationFeatureSpecification", "name": "Aparcamiento gratuito", "value": true},
+    {"@type": "LocationFeatureSpecification", "name": "Billar y ping pong", "value": true},
+    {"@type": "LocationFeatureSpecification", "name": "Lavadora y secadora", "value": true}
+  ],
+  "sameAs": ["https://www.airbnb.es/rooms/916415068773570777"]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {"@type": "Question", "name": "¿Para cuántas personas es la casa?", "acceptedAnswer": {"@type": "Answer", "text": "Hasta 8 personas, en 4 dormitorios con 7 camas. Se alquila la casa entera."}},
+    {"@type": "Question", "name": "¿A qué distancia está de Pamplona?", "acceptedAnswer": {"@type": "Answer", "text": "A 9 km del centro de Pamplona, unos 15 minutos en coche."}},
+    {"@type": "Question", "name": "¿Es adecuada para familias con niños?", "acceptedAnswer": {"@type": "Answer", "text": "Sí: planta baja con billar y ping pong, y jardín de más de 1.500 m² en un pueblo sin apenas tráfico."}},
+    {"@type": "Question", "name": "¿Cómo se reserva?", "acceptedAnswer": {"@type": "Answer", "text": "Consultando el calendario de disponibilidad y escribiendo a maistorenaetxea@gmail.com, o a través de Airbnb."}},
+    {"@type": "Question", "name": "¿Cuál es la estancia mínima?", "acceptedAnswer": {"@type": "Answer", "text": "2 noches todo el año; 3 noches del 6 al 14 de julio y 5 noches del 15 de julio al 31 de agosto."}},
+    {"@type": "Question", "name": "¿Se admiten mascotas? ¿Hay cuna?", "acceptedAnswer": {"@type": "Answer", "text": "No se admiten mascotas. Hay una cuna disponible para bebés."}}
+  ]
+}
+</script>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <a class="marca" href="#">Maistorena Etxea</a>
+    <nav>
+      <a href="#casa">La casa</a>
+      <a href="#fotos">Fotos</a>
+      <a href="#disponibilidad">Disponibilidad</a>
+      <a href="#donde">Dónde estamos</a>
+      <a href="#preguntas">Preguntas</a>
+      <a href="#reserva-directa">Reserva directa</a>
+      <a class="cta" href="#contacto">Reservar</a>
+    </nav>
+  </div>
+</header>
+
+<div class="hero">
+  <div class="wrap">
+    <h1>Maistorena Etxea</h1>
+    <p>Casa rural completa para 8 personas a 15 minutos de Pamplona. Caserío de piedra y madera con más de 200 años en Garciriáin, Valle de Juslapeña, a las faldas del monte Ezkaba.</p>
+    <a class="btn" href="#disponibilidad">Ver disponibilidad</a>
+    <a class="btn sec" href="#contacto">Contactar</a>
+  </div>
+</div>
+
+<div class="wrap">
+  <div class="datos">
+    <div class="dato"><b>8</b><span>huéspedes</span></div>
+    <div class="dato"><b>4</b><span>dormitorios · 7 camas</span></div>
+    <div class="dato"><b>2,5</b><span>baños</span></div>
+    <div class="dato"><b>1.500 m²</b><span>de jardín</span></div>
+    <div class="dato"><b>9 km</b><span>a Pamplona</span></div>
+  </div>
+</div>
+
+<section id="casa">
+  <div class="wrap dos">
+    <div>
+      <h2>Una casa rural para 8 personas cerca de Pamplona</h2>
+      <p>Maistorena es un caserío restaurado de piedra y madera, con más de 200 años de historia, en Garciriáin, un pueblo pequeño y tranquilo del Valle de Juslapeña. Está en un entorno rural sin ruidos y apenas vehículos, y a la vez muy cerca de Pamplona.</p>
+      <p>Se alquila la casa entera, en tres plantas:</p>
+      <ul>
+        <li><strong>Planta baja:</strong> amplio espacio de juegos con billar y mesa de ping pong, zona para comidas, cuarto de lavadora y secadora, y un aseo.</li>
+        <li><strong>Primera planta:</strong> la vivienda, con cuatro habitaciones, salón comedor, cocina y dos baños.</li>
+        <li><strong>Sabai:</strong> espacio diáfano bajo cubierta con terraza cubierta y zona de relax con mesa comedor.</li>
+      </ul>
+      <p>El jardín exterior tiene más de 1.500 m², un entorno totalmente tranquilo para relajarse y pasear.</p>
+      <p>Su ubicación permite llegar con comodidad a destinos muy distintos: la costa guipuzcoana, el Pirineo, las Bardenas Reales o el Valle de Baztan.</p>
+    </div>
+    <div class="caja">
+      <h3>Comodidades</h3>
+      <ul>
+        <li>Cocina completa</li>
+        <li>Wifi y zona para trabajar</li>
+        <li>Televisión de 55"</li>
+        <li>Lavadora y secadora</li>
+        <li>Billar y ping pong</li>
+        <li>Terraza cubierta</li>
+        <li>Jardín de 1.500 m²</li>
+        <li>Aparcamiento gratuito en la propiedad</li>
+        <li>Cuna disponible bajo petición</li>
+        <li>No se admiten mascotas</li>
+      </ul>
+      <p class="nota" style="margin-bottom:0">Casa rural inscrita en el Registro de Turismo de Navarra con el código <strong>UCR01206</strong>.</p>
+    </div>
+  </div>
+</section>
+
+<section id="fotos" style="background:var(--piedra-2)">
+  <div class="wrap">
+    <h2>Fotos</h2>
+    <div class="galeria" id="galeria"></div>
+  </div>
+</section>
+<div class="visor" id="visor">
+  <button class="cerrar" aria-label="Cerrar">&times;</button>
+  <button class="prev" aria-label="Anterior">&#8249;</button>
+  <img id="visor-img" alt="">
+  <button class="next" aria-label="Siguiente">&#8250;</button>
+</div>
+
+<section id="disponibilidad">
+  <div class="wrap">
+    <h2>Disponibilidad</h2>
+    <div class="leyenda">
+      <span><i style="background:#eef3ea;border:1px solid #cfdcc6"></i>Libre</span>
+      <span><i style="background:var(--ocupado)"></i>Ocupado</span>
+    </div>
+    <div id="cal-aviso" class="aviso" style="display:none"></div>
+    <div class="cal-grid" id="calendario"></div>
+    <p class="nota" id="cal-nota">El calendario se sincroniza con nuestras reservas y es orientativo; la actualización puede tardar unas horas. Para confirmar fechas, <a href="#contacto">contacta con nosotros</a>.</p>
+  </div>
+</section>
+
+<section id="donde" style="background:var(--piedra-2)">
+  <div class="wrap dos">
+    <div>
+      <h2>Dónde estamos: a 9 km de Pamplona</h2>
+      <p>Garciriáin, Valle de Juslapeña (Navarra). A 9 km de Pamplona, unos 15 minutos en coche.</p>
+      <p>Buen punto de partida para conocer Navarra: Pamplona y su Casco Viejo, el Pirineo navarro, el Valle de Baztan, las Bardenas Reales y la costa de Gipuzkoa.</p>
+      <p><a class="btn" style="background:var(--madera);color:#fff" href="https://www.google.com/maps/search/?api=1&query=Garciriáin,+Navarra" target="_blank" rel="noopener">Abrir en Google Maps</a></p>
+    </div>
+    <div class="caja">
+      <h3>Cómo llegar</h3>
+      <ul>
+        <li>Desde Pamplona: salida hacia el Valle de Juslapeña por la NA-4210.</li>
+        <li>Aeropuerto de Pamplona: 20 minutos.</li>
+        <li>San Sebastián: 1 h 10 min · Bilbao: 1 h 50 min.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section id="preguntas">
+  <div class="wrap">
+    <h2>Preguntas frecuentes</h2>
+    <div class="dos" style="gap:24px">
+      <div>
+        <div class="caja" style="margin-bottom:16px">
+          <h3>¿Para cuántas personas es la casa?</h3>
+          <p style="margin:0">Hasta 8 personas, en 4 dormitorios con 7 camas. Se alquila la casa entera, nunca por habitaciones, así que el grupo tiene toda la casa y el jardín para sí.</p>
+        </div>
+        <div class="caja" style="margin-bottom:16px">
+          <h3>¿A qué distancia está de Pamplona?</h3>
+          <p style="margin:0">A 9 km del centro, unos 15 minutos en coche por la NA-4210. Es una buena opción para alojarse cerca de Pamplona en un entorno rural tranquilo, también en San Fermín.</p>
+        </div>
+        <div class="caja">
+          <h3>¿Es adecuada para familias con niños?</h3>
+          <p style="margin:0">La planta baja tiene billar y mesa de ping pong, y el jardín vallado de más de 1.500 m² da espacio para jugar. El pueblo apenas tiene tráfico.</p>
+        </div>
+      </div>
+      <div>
+        <div class="caja" style="margin-bottom:16px">
+          <h3>¿Qué se puede visitar desde la casa?</h3>
+          <p style="margin:0">Pamplona y su Casco Viejo (15 min), el Valle de Baztan y Elizondo (45 min), Roncesvalles y el Pirineo (1 h), San Sebastián y la costa (1 h 10 min), las Bardenas Reales (1 h 15 min) y Olite y la zona media de Navarra (50 min).</p>
+        </div>
+        <div class="caja" style="margin-bottom:16px">
+          <h3>¿Cómo se reserva?</h3>
+          <p style="margin:0">Consulta la disponibilidad en el calendario y escríbenos a <a href="mailto:maistorenaetxea@gmail.com">maistorenaetxea@gmail.com</a> con fechas y número de personas. También puedes reservar a través de <a href="https://www.airbnb.es/rooms/916415068773570777" target="_blank" rel="noopener">Airbnb</a>.</p>
+        </div>
+        <div class="caja" style="margin-bottom:16px">
+          <h3>¿Cuál es la estancia mínima?</h3>
+          <p style="margin:0">2 noches durante todo el año, con dos excepciones: del 6 al 14 de julio (San Fermín) el mínimo es de 3 noches, y del 15 de julio al 31 de agosto, de 5 noches.</p>
+        </div>
+        <div class="caja">
+          <h3>¿Se admiten mascotas? ¿Hay cuna?</h3>
+          <p style="margin:0">No se admiten mascotas. Hay una cuna disponible para bebés; indícalo al reservar. La casa está inscrita en el Registro de Turismo de Navarra con el código UCR01206.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="reserva-directa" class="directa">
+  <div class="wrap">
+    <h2>Reserva directa: otro precio</h2>
+    <p class="intro">La casa está en Airbnb, pero reservando directamente con nosotros no hay comisiones de plataforma de por medio. Por eso el precio que te damos por correo es distinto al que ves en Airbnb para las mismas fechas.</p>
+    <div class="compara">
+      <div class="col">
+        <h3>Reservando en Airbnb</h3>
+        <ul>
+          <li class="no"><i>–</i><span>El precio incluye la comisión de servicio de la plataforma.</span></li>
+          <li class="si"><i>✓</i><span>Pago, cancelación y condiciones según las reglas de Airbnb.</span></li>
+          <li class="si"><i>✓</i><span>Mismo calendario de disponibilidad.</span></li>
+        </ul>
+      </div>
+      <div class="vs">o</div>
+      <div class="col aqui">
+        <h3>Reservando aquí <span class="sello">Directo</span></h3>
+        <ul>
+          <li class="si"><i>✓</i><span>Sin comisiones de plataforma: el precio lo acuerdas directamente con la propiedad.</span></li>
+          <li class="si"><i>✓</i><span>Forma de pago, cancelación y cambios de fecha acordados contigo, sin las reglas de la plataforma.</span></li>
+          <li class="si"><i>✓</i><span>Mismo calendario de disponibilidad.</span></li>
+        </ul>
+      </div>
+    </div>
+    <p class="nota">Para conocer el precio de tus fechas, <a href="#contacto">escríbenos</a> indicando días y número de personas. Te respondemos en el día.</p>
+  </div>
+</section>
+
+<section id="contacto" class="contacto">
+  <div class="wrap dos">
+    <div>
+      <h2>Reservas y contacto</h2>
+      <p>Escríbenos con las fechas y el número de personas y te respondemos en el día.</p>
+      <p style="font-size:1.1rem"><strong>Correo:</strong> <a href="mailto:maistorenaetxea@gmail.com">maistorenaetxea@gmail.com</a></p>
+    </div>
+    <div>
+      <a class="btn" href="mailto:maistorenaetxea@gmail.com?subject=Consulta%20de%20disponibilidad%20Maistorena%20Etxea&body=Hola,%0A%0AMe%20interesa%20Maistorena%20Etxea.%0AFechas:%20%0AN%C3%BAmero%20de%20personas:%20%0A%0AGracias">Escribir un correo</a>
+      <p class="nota" style="color:#f1e6d8;margin-top:14px">También puedes reservar en <a href="https://www.airbnb.es/rooms/916415068773570777" target="_blank" rel="noopener">Airbnb</a> (valoración 4,96 sobre 5 con más de 50 evaluaciones).</p>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    Maistorena Etxea · Garciriáin, Juslapeña (Navarra) · Registro de Turismo de Navarra UCR01206 ·
+    <a href="privacidad.html">Aviso legal y privacidad</a> · Esta web no utiliza cookies.
+  </div>
+</footer>
+
+<script>
+/* ================= GALERÍA =================
+   Fotos en /fotos (1600 px, para el visor) y miniaturas en /fotos/t (800 px, para la rejilla), con el mismo nombre.
+   La 01.jpg es también la de portada. Añade o quita líneas según las fotos que tengas. */
+const FOTOS = [
+  ["01.jpg", "Fachada del caserío y jardín"],
+  ["02.jpg", "Maistorena Etxea desde el aire, con el Valle de Juslapeña al fondo"],
+  ["03.jpg", "Jardín de más de 1.500 m²"],
+  ["04.jpg", "Portón de entrada bajo el arce"],
+  ["05.jpg", "Salón con estufa de leña y biblioteca"],
+  ["06.jpg", "Cocina con mesa comedor"],
+  ["07.jpg", "Dormitorio con pared de piedra"],
+  ["08.jpg", "Dormitorio"],
+  ["09.jpg", "Dormitorio"],
+  ["10.jpg", "Baño con ducha"],
+  ["11.jpg", "Baño"],
+  ["12.jpg", "Sabai: espacio diáfano bajo cubierta"],
+  ["13.jpg", "Sabai: zona de relax"],
+  ["14.jpg", "Terraza cubierta del sabai"],
+  ["15.jpg", "Planta baja: zona de comidas y juegos"],
+  ["16.jpg", "Planta baja: billar y mesa de ping pong"],
+  ["17.jpg", "Azulejo con el nombre de la casa"],
+];
+const gal = document.getElementById("galeria");
+FOTOS.forEach(([f, alt], i) => {
+  const fig = document.createElement("figure");
+  fig.innerHTML = `<img src="fotos/t/${f}" alt="${alt}" loading="lazy">`;
+  fig.addEventListener("click", () => abrir(i));
+  gal.appendChild(fig);
+});
+const visor = document.getElementById("visor"), vimg = document.getElementById("visor-img");
+let idx = 0;
+function abrir(i){ idx = i; vimg.src = "fotos/" + FOTOS[i][0]; vimg.alt = FOTOS[i][1]; visor.classList.add("on"); }
+visor.querySelector(".cerrar").onclick = () => visor.classList.remove("on");
+visor.querySelector(".prev").onclick = e => { e.stopPropagation(); abrir((idx - 1 + FOTOS.length) % FOTOS.length); };
+visor.querySelector(".next").onclick = e => { e.stopPropagation(); abrir((idx + 1) % FOTOS.length); };
+visor.addEventListener("click", e => { if (e.target === visor) visor.classList.remove("on"); });
+document.addEventListener("keydown", e => {
+  if (!visor.classList.contains("on")) return;
+  if (e.key === "Escape") visor.classList.remove("on");
+  if (e.key === "ArrowLeft") visor.querySelector(".prev").click();
+  if (e.key === "ArrowRight") visor.querySelector(".next").click();
+});
+
+/* ================= CALENDARIO =================
+   Pide a /api/calendar las fechas ocupadas (función de Cloudflare que lee el iCal de Airbnb)
+   y pinta los próximos MESES meses. */
+const MESES = 6;
+const cont = document.getElementById("calendario"), aviso = document.getElementById("cal-aviso");
+const hoy = new Date(); hoy.setHours(0,0,0,0);
+const ymd = d => d.getFullYear() + "-" + String(d.getMonth()+1).padStart(2,"0") + "-" + String(d.getDate()).padStart(2,"0");
+
+function pintar(ocupados){
+  const set = new Set();
+  ocupados.forEach(({start, end}) => {
+    const d = new Date(start + "T00:00:00"), fin = new Date(end + "T00:00:00");
+    for (; d < fin; d.setDate(d.getDate() + 1)) set.add(ymd(d));
+  });
+  cont.innerHTML = "";
+  for (let m = 0; m < MESES; m++){
+    const primero = new Date(hoy.getFullYear(), hoy.getMonth() + m, 1);
+    const dias = new Date(primero.getFullYear(), primero.getMonth() + 1, 0).getDate();
+    let offset = (primero.getDay() + 6) % 7; // lunes = 0
+    const titulo = primero.toLocaleDateString("es-ES",{month:"long",year:"numeric"});
+    let html = `<h3>${titulo.charAt(0).toUpperCase() + titulo.slice(1)}</h3><table><tr>` +
+      ["L","M","X","J","V","S","D"].map(d => `<th>${d}</th>`).join("") + "</tr><tr>";
+    for (let i = 0; i < offset; i++) html += "<td></td>";
+    for (let d = 1; d <= dias; d++){
+      const fecha = new Date(primero.getFullYear(), primero.getMonth(), d);
+      const key = ymd(fecha);
+      const cls = fecha < hoy ? "pasado" : set.has(key) ? "ocupado" : "libre";
+      html += `<td class="${cls}"><span>${d}</span></td>`;
+      if ((offset + d) % 7 === 0 && d < dias) html += "</tr><tr>";
+    }
+    html += "</tr></table>";
+    const div = document.createElement("div"); div.className = "mes"; div.innerHTML = html; cont.appendChild(div);
+  }
+}
+
+fetch("/api/calendar")
+  .then(r => { if (!r.ok) throw new Error(r.status); return r.json(); })
+  .then(data => { if (data.error) throw new Error(data.error); pintar(data.busy || []); })
+  .catch(() => {
+    pintar([]);
+    aviso.style.display = "block";
+    aviso.textContent = "Ahora mismo no podemos mostrar la disponibilidad en tiempo real. Consúltanos las fechas por correo.";
+  });
+</script>
+</body>
+</html>
