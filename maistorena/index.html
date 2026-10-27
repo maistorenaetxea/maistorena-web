@@ -41,6 +41,9 @@
   .hero::after{content:"";position:absolute;inset:0;background:linear-gradient(to top,rgba(20,14,8,.78) 0%,rgba(20,14,8,.15) 60%)}
   .hero .wrap{position:relative;z-index:1;padding-bottom:48px}
   .hero h1{font-size:clamp(2.2rem,6vw,4rem);margin-bottom:.2em}
+  .hero .pill{display:inline-flex;align-items:center;gap:8px;background:rgba(43,36,28,.62);border:1.5px solid rgba(255,255,255,.8);backdrop-filter:blur(4px);color:#fff;text-decoration:none;font-size:.95rem;font-weight:600;padding:8px 14px;border-radius:999px;margin-bottom:18px}
+  .hero .pill b{background:#fff;color:var(--madera);font-size:.75rem;letter-spacing:.04em;padding:2px 8px;border-radius:999px}
+  .hero .pill:hover{background:rgba(43,36,28,.8)}
   .hero p{font-size:1.15rem;max-width:560px;margin:0 0 20px;opacity:.95}
   .btn{display:inline-block;background:#fff;color:var(--tinta);padding:12px 20px;border-radius:6px;text-decoration:none;font-weight:600}
   .btn.sec{background:transparent;color:#fff;border:1.5px solid rgba(255,255,255,.8);margin-left:8px}
@@ -178,10 +181,11 @@
 
 <div class="hero">
   <div class="wrap">
+    <a class="pill" href="#reserva-directa"><b>RESERVA DIRECTA</b> Sin comisiones de plataforma: precio distinto al de Airbnb</a>
     <h1>Maistorena Etxea</h1>
     <p>Casa rural completa para 8 personas a 15 minutos de Pamplona. Caserío de piedra y madera con más de 200 años en Garciriáin, Valle de Juslapeña, a las faldas del monte Ezkaba.</p>
     <a class="btn" href="#disponibilidad">Ver disponibilidad</a>
-    <a class="btn sec" href="#contacto">Contactar</a>
+    <a class="btn sec" href="#reserva-directa">Cómo reservar directo</a>
   </div>
 </div>
 
